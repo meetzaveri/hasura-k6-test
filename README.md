@@ -52,7 +52,7 @@ export const options = {
   // gracefulStop: '300s',
   duration: "10s",
   // iterations: 1,
-  vus: 20,
+  vus: 10,
 };
 
 export default function () {
@@ -94,3 +94,15 @@ export default function () {
 ```
 
 I've added the comments in the code where you can replace the K6 options and the URL, query and request headers as needed.
+
+### Running tests
+
+Once you are all done with setup, it's time to run tests.
+
+Open your favorite CLI (terminal), and perform following command
+
+```
+k6 run index.js
+```
+
+This will assume to take scenario options available inside `options` object which we have defined. Otherwise you can override by passing flags to that command.
